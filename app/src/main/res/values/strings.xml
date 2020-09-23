@@ -1,3 +1,21 @@
 <resources>
-    <string name="app_name">MwakazyAdmin</string>
+    <string name="public_key">FLWPUBK-7e91968abdbf7916012959d7ec34ddaa-X</string>
+    <string name="encryption_key">0505fb5d9d3f6f2b773b837d</string>
+
+
+    <string name="app_name">Mwakazy</string>
+    <string name="reply">Reply</string>
+    <string name="delete_for_me">Delete for me</string>
+    <string name="delete_for_all">Delete for all</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="change_phone_number">Change Phone Number</string>
+    <string name="notifications">Notifications</string>
+    <string name="get_help">Get Help</string>
+    <string name="report_problem">Report a Problem</string>
+    <string name="terms_of_use">Terms of Use</string>
+    <string name="logout">Logout</string>
+    <string name="save_changes">Save</string>
+    <string name="title_activity_maps">Map</string>
+
+    <string name="google_maps_key">AIzaSyA8FsYJIXJWA-nf3dxGqvQA2l1__58qsGg</string>
 </resources>
