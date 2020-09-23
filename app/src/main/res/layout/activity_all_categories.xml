@@ -8,6 +8,7 @@
     tools:context=".AllCategoriesActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/pageConstraint"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -42,10 +43,10 @@
                     android:text="Mwakazy"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="@id/search"
+                    app:layout_constraintBottom_toBottomOf="@id/newCategory"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@id/search" />
+                    app:layout_constraintTop_toTopOf="@id/newCategory" />
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/home"
@@ -85,11 +86,11 @@
                     android:focusable="true"
                     android:src="@drawable/notifications"
                     android:visibility="gone"
-                    app:layout_constraintEnd_toStartOf="@id/search"
+                    app:layout_constraintEnd_toStartOf="@id/newCategory"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/search"
+                    android:id="@+id/newCategory"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_marginTop="10dp"
@@ -97,7 +98,7 @@
                     android:layout_marginRight="20dp"
                     android:clickable="true"
                     android:focusable="true"
-                    android:src="@drawable/search"
+                    android:src="@drawable/plus"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -152,9 +153,11 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/newConstraint"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorWhite">
+        android:background="@color/colorWhite"
+        android:visibility="gone">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/categoryImage"
@@ -206,6 +209,23 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/categoryPrice" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/saveCategory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/btn_gradient_normal"
+            android:gravity="center"
+            android:inputType="number"
+            android:padding="20dp"
+            android:text="ADD"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/categoryPer" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
