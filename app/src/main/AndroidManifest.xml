@@ -25,6 +25,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppCustomTheme.NoActionBar"
         tools:replace="android:icon">
+        <activity android:name=".CategoryExtrasActivity"></activity>
         <activity
             android:name=".EditServiceActivity"
             android:screenOrientation="portrait"

@@ -260,44 +260,9 @@ public class MainActivity extends AppCompatActivity {
                             startActivity(mainActivity);
                             finish();
                         } else {
-                            if (snapshot.child("subscription").exists()) {
-                                long today = System.currentTimeMillis() / 1000L;
-                                long nextMonth = Long.parseLong(Objects.requireNonNull(snapshot.child("next_month").getValue()).toString());
-
-
-                                // long dv = today * 1000;// its need to be in milisecond
-                                // Date df = new java.util.Date(dv);
-                                // String vv = new SimpleDateFormat("dd MMMM yyyy").format(df);
-
-                                // long dvs = nextMonth * 1000;// its need to be in milisecond
-                                // Date dfs = new java.util.Date(dvs);
-                                // String vvs = new SimpleDateFormat("dd MMMM yyyy").format(dfs);
-
-                                // Toast.makeText(MainActivity.this, "This month " + vv, Toast.LENGTH_SHORT).show();
-                                // Toast.makeText(MainActivity.this, "Next month " + vvs, Toast.LENGTH_SHORT).show();
-
-                                if (today > nextMonth) {
-                                    Intent mainActivity = new Intent(getApplicationContext(), RenewSubscriptionActivity.class);
-                                    startActivity(mainActivity);
-                                    finish();
-                                } else {
-                                    String deviceToken = FirebaseInstanceId.getInstance().getToken();
-                                    dbRef.child("Users").child(UID).child("device").setValue(deviceToken);
-                                    if (user_type.equals("tasker")) {
-                                        Intent mainActivity = new Intent(getApplicationContext(), MyOrdersActivity.class);
-                                        startActivity(mainActivity);
-                                        finish();
-                                    } else {
-                                        Intent mainActivity = new Intent(getApplicationContext(), WhichTaskActivity.class);
-                                        startActivity(mainActivity);
-                                        finish();
-                                    }
-                                }
-                            } else {
-                                Intent mainActivity = new Intent(getApplicationContext(), ChooseSubscriptionActivity.class);
-                                startActivity(mainActivity);
-                                finish();
-                            }
+                            Intent mainActivity = new Intent(getApplicationContext(), FeedActivity.class);
+                            startActivity(mainActivity);
+                            finish();
                         }
                     }
 

@@ -1,11 +1,12 @@
 package tech.berjis.mwakazyadmin;
 
 public class Categories {
-    String name, image;
+    String name, image, categoryId;
 
-    public Categories(String name, String image) {
+    public Categories(String name, String image, String categoryId) {
         this.name = name;
         this.image = image;
+        this.categoryId = categoryId;
     }
 
     public Categories(){}
@@ -24,5 +25,13 @@ public class Categories {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public String getCategoryId() {
+        return categoryId;
+    }
+
+    public void setCategoryId(String categoryId) {
+        this.categoryId = categoryId;
     }
 }

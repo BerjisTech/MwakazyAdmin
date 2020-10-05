@@ -51,6 +51,17 @@ class AllCategoriesAdapter extends RecyclerView.Adapter<AllCategoriesAdapter.Vie
                 holder.itemView.getContext().startActivity(c_intent);
             }
         });
+        holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Intent c_intent = new Intent(holder.itemView.getContext(), CategoryExtrasActivity.class);
+                Bundle c_bundle = new Bundle();
+                c_bundle.putString("category", ld.getCategoryId());
+                c_intent.putExtras(c_bundle);
+                holder.itemView.getContext().startActivity(c_intent);
+                return false;
+            }
+        });
     }
 
     @Override

@@ -193,7 +193,7 @@ public class ByCategoryActivity extends AppCompatActivity {
 
     private void loadcategories() {
         categoriesList.clear();
-        categoriesList.add(new Categories("All Categories", "drawable://" + R.drawable.plus));
+        categoriesList.add(new Categories("All Categories", "drawable://" + R.drawable.plus, ""));
         categoryRecycler.setLayoutManager(new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false));
         dbRef.child("Categories").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override

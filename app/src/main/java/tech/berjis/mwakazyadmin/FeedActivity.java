@@ -213,7 +213,7 @@ public class FeedActivity extends AppCompatActivity {
 
     private void loadcategories() {
         categoriesList.clear();
-        categoriesList.add(new Categories("All Categories", "drawable://" + R.drawable.plus));
+        categoriesList.add(new Categories("All Categories", "drawable://" + R.drawable.plus, ""));
         categoryRecycler.setLayoutManager(new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false));
         dbRef.child("Categories").limitToLast(10).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
